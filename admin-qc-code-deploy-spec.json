@@ -13,5 +13,11 @@
         }
       }
     }
-  ]
+  ],
+  "Hooks": [
+		{
+			"BeforeAllowTraffic": "waitForMinutes"
+		}
+	]
+}
 }
