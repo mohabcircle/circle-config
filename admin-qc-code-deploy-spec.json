@@ -16,9 +16,6 @@
   ],
   "Hooks": [
     {
-      "AfterAllowTestTraffic": "waitForMinutes"
-    },
-    {
       "BeforeAllowTraffic": "waitForMinutes"
     }
   ]
