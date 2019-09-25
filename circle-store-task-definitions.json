@@ -1,0 +1,39 @@
+{
+  "family": "store-qc",
+  "containerDefinitions": [
+    {
+      "portMappings": [
+        {
+          "containerPort": 8046,
+          "protocol": "tcp",
+          "hostPort": 8046
+        }
+      ],
+      "name": "store-qc",
+      "image": "<IMAGE1_NAME>",
+      "essential": true,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/store-qc-log",
+          "awslogs-region": "us-east-2",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "environment": [
+        {
+          "name": "SPRING_PROFILES_ACTIVE",
+          "value": "qc"
+        }
+      ]
+    }
+  ],
+  "cpu": "512",
+  "memory": "1024",
+  "taskRoleArn": "arn:aws:iam::869034027937:role/ecs-task-role",
+  "executionRoleArn": "arn:aws:iam::869034027937:role/ecs-task-execution-role",
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "networkMode": "awsvpc"
+}
