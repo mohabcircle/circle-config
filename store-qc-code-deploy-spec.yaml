@@ -7,3 +7,5 @@ Resources:
         LoadBalancerInfo:
           ContainerName: "store-qc"
           ContainerPort: 8046
+Hooks:
+  - BeforeAllowTraffic: "waitForMinutes"
