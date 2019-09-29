@@ -1,0 +1,39 @@
+{
+  "family": "customer-qc",
+  "containerDefinitions": [
+    {
+      "portMappings": [
+        {
+          "containerPort": 8044,
+          "protocol": "tcp",
+          "hostPort": 8044
+        }
+      ],
+      "name": "customer-qc",
+      "image": "<IMAGE_NAME>",
+      "essential": true,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/customer-qc-log",
+          "awslogs-region": "us-east-2",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "environment": [
+        {
+          "name": "SPRING_PROFILES_ACTIVE",
+          "value": "qc"
+        }
+      ]
+    }
+  ],
+  "cpu": "1024",
+  "memory": "2048",
+  "taskRoleArn": "arn:aws:iam::869034027937:role/ecs-task-role",
+  "executionRoleArn": "arn:aws:iam::869034027937:role/ecs-task-execution-role",
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "networkMode": "awsvpc"
+}
