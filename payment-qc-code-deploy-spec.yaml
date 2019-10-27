@@ -9,4 +9,4 @@ Resources:
           ContainerPort: 8040
 Hooks:
   - BeforeAllowTraffic: "waitForMinutes"
-  
+ 
