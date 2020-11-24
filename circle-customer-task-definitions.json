@@ -24,6 +24,10 @@
         {
           "name": "SPRING_PROFILES_ACTIVE",
           "value": "qc"
+        }, 
+        {
+          "name": "JAVA_OPTS",
+          "value": "-Xms2g -Xmx3g"
         }
       ]
     }
