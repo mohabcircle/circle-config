@@ -24,12 +24,16 @@
         {
           "name": "SPRING_PROFILES_ACTIVE",
           "value": "qc"
+        },
+        {
+          "name": "JAVA_OPTS",
+          "value": "-Xms2g -Xmx3g"
         }
       ]
     }
   ],
   "cpu": "1024",
-  "memory": "2048",
+  "memory": "4096",
   "taskRoleArn": "arn:aws:iam::869034027937:role/ecs-task-role",
   "executionRoleArn": "arn:aws:iam::869034027937:role/ecs-task-execution-role",
   "requiresCompatibilities": [
