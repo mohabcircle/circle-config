@@ -28,6 +28,10 @@
         {
           "name": "JAVA_OPTS",
           "value": "-Xms2g -Xmx3g"
+        },
+        {
+          "name": "TZ",
+          "value": "Asia/Riyadh"
         }
       ]
     }
