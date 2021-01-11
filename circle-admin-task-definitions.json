@@ -29,9 +29,7 @@
           "name": "TZ",
           "value": "Asia/Riyadh"
         }
-      ]
-    }
-  ],
+      ],
   "cpu": "1024",
   "memory": "2048",
   "taskRoleArn": "arn:aws:iam::869034027937:role/ecs-task-role",
