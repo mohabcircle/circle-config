@@ -20,12 +20,18 @@
           "awslogs-stream-prefix": "ecs"
         }
       },
-      "environment": [
+       "environment": [
         {
           "name": "SPRING_PROFILES_ACTIVE",
           "value": "qc"
+        },
+        {
+          "name": "TZ",
+          "value": "Asia/Riyadh"
         }
       ]
+    }
+  ]
     }
   ],
   "cpu": "1024",
